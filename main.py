@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import maritalk
 from dotenv import load_dotenv
 import os
+import markdown2
 
 app = Flask(__name__)
 
@@ -26,8 +27,9 @@ def pergunta():
     data = request.get_json()  # Recebe os dados JSON da requisição POST
     response = model.generate(data['pergunta'])
     answer = response["answer"]
+    html = markdown2.markdown(answer) 
     # return answer
-    return jsonify({'resposta': answer}), 200
+    return jsonify({'resposta': html}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)

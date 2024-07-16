@@ -17,7 +17,7 @@
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
 
-        <div id="resposta"></div>
+        <div class="m-1" id="resposta"></div>
     </div>
 
     <!-- Add Bootstrap JS -->
@@ -42,10 +42,10 @@
             })
                 .then(response => response.json())
                 .then(data => {
-                    respostaDiv.textContent = 'A resposta para sua pergunta é: ' + data.resposta;
+                    respostaDiv.innerHTML = `A resposta para a pergunta <span>${document.getElementById('pergunta').value}</span> é: <br>` + data.resposta;
                 })
                 .catch(error => {
-                    respostaDiv.textContent = 'Ocorreu um erro ao processar a pergunta.';
+                    respostaDiv.innerHTML = 'Ocorreu um erro ao processar a pergunta.';
                     console.error(error);
                 });
 
@@ -54,7 +54,7 @@
             // Aqui você pode adicionar a lógica para processar a pergunta e obter a resposta
 
             // Exemplo de exibição da resposta
-            respostaDiv.textContent = 'A resposta para sua pergunta é: ...';
+            respostaDiv.innerHTML = `A resposta para a pergunta ${document.getElementById('pergunta').value} é: ...`;
         });
     </script>
 

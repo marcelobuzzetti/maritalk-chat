@@ -1,3 +1,4 @@
 maritalk
 python-dotenv
 flask
+markdown2
