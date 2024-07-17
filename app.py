@@ -7,8 +7,8 @@ import os
 load_dotenv()
 
 # Get the API key from environment variable
-api_key = os.getenv("API_KEY")
-model = os.getenv("MODEL")
+api_key = os.getenv("API_KEY_MARITACA")
+model = os.getenv("MODEL_MARITACA")
 
 textos = []
 
