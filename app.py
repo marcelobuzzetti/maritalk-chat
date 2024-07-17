@@ -11,13 +11,6 @@ load_dotenv()
 api_key = os.getenv("API_KEY")
 model = os.getenv("MODEL")
 
-url = "https://chat.maritaca.ai/api/chat/inference"
-
-
-auth_header = {
-    "authorization": f"Key {api_key}"
-}
-
 textos = []
 
 model = maritalk.MariTalk(
@@ -26,13 +19,12 @@ model = maritalk.MariTalk(
 )
 
 textos = []
-response_data = {"answer": "Error"}
 
 @cl.on_message
-async def main(message: cl.Message, textos=textos, response_data=response_data):
+async def main(message: cl.Message):
     textos.append({"role": "user", "content": message.content})
     answer = model.generate(textos)['answer']
-    textos.append({"role": "assistant", "content": response_data["answer"]})
+    textos.append({"role": "assistant", "content": answer})
     await cl.Message(
         content=f"{answer}",
     ).send()
