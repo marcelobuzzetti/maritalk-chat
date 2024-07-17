@@ -2,7 +2,7 @@ import chainlit as cl
 import maritalk
 from dotenv import load_dotenv
 import os
-import markdown2
+import requests
 
 # Load environment variables from .env file
 load_dotenv()
@@ -11,19 +11,28 @@ load_dotenv()
 api_key = os.getenv("API_KEY")
 model = os.getenv("MODEL")
 
+url = "https://chat.maritaca.ai/api/chat/inference"
+
+
+auth_header = {
+    "authorization": f"Key {api_key}"
+}
+
+textos = []
+
 model = maritalk.MariTalk(
     key=api_key,
-    model=model  # No momento, suportamos os modelos sabia-3, sabia-2-medium e sabia-2-small
+    model=model
 )
 
+textos = []
+response_data = {"answer": "Error"}
 
 @cl.on_message
-async def main(message: cl.Message):
-    response = model.generate(message.content)
-    answer = response["answer"]
-    # html = markdown2.markdown(answer) 
-    # return answer
-    # return jsonify({'resposta': html}), 200
+async def main(message: cl.Message, textos=textos, response_data=response_data):
+    textos.append({"role": "user", "content": message.content})
+    answer = model.generate(textos)['answer']
+    textos.append({"role": "assistant", "content": response_data["answer"]})
     await cl.Message(
-        content=f"Received: {answer}",
+        content=f"{answer}",
     ).send()
