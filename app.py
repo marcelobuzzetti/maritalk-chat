@@ -2,7 +2,6 @@ import chainlit as cl
 import maritalk
 from dotenv import load_dotenv
 import os
-import requests
 
 # Load environment variables from .env file
 load_dotenv()
