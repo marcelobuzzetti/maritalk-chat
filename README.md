@@ -1,16 +1,12 @@
 # Uso do Chainlit e Literal AI com Maritaca em Python
 
-Este repositório é dedicado ao desenvolvimento e exploração da integração entre Chainlit, Literal AI e Maritaca usando Python. O objetivo é criar aplicações que tirem proveito das capacidades únicas de cada uma dessas ferramentas, proporcionando uma experiência rica e interativa para os usuários.
-
-## Sobre as Ferramentas
-
-
-Este repositório é dedicado ao desenvolvimento e exploração da integração entre Chainlit, Literal AI e Maritaca usando Python. O objetivo é criar aplicações que tirem proveito das capacidades únicas de cada uma dessas ferramentas, proporcionando uma experiência rica e interativa para os usuários.
+Este repositório ajudará a criar um chatbot com o uso de Chainlit, Literal AI e Maritaca usando Python.
 
 ## Sobre as Ferramentas
 
 - **Literal AI**: [Literal AI](https://literalai.com/) é a plataforma de avaliação e observabilidade LLM preferida para desenvolvedores e proprietários de produtos.
-- **Maritaca AI**: [MariTalk](https://www.maritaca.ai/) é um chatbot baseado em LLM e treinado para atender o Brasil.
+- **Maritaca AI**: [MariTalk](https://www.maritaca.ai/) é um chatbot baseado em LLM e treinado para atender o Brasil. Maritaca AI é uma empresa brasileira que desenvolve inteligências artificiais especializadas em domínios e idiomas, garantindo que reflitam o conhecimento único de diversas regiões do planeta e segmentos de mercado. 
+
 - **Chainlit**: [Chainlit](https://chainlit.io/) é um framework Python assíncrono de código aberto que permite aos desenvolvedores construir aplicações escaláveis de IA conversacional ou agêntica.
 
 ## Configuração do Ambiente
