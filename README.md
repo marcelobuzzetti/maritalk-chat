@@ -1,4 +1,4 @@
-# Uso do Chainlit e Literal AI com Maritaca em Python
+# Uso do Maritaca AI com Chainlit e Literal AI
 
 Este repositório ajudará a criar um chatbot com o uso de Chainlit, Literal AI e Maritaca usando Python.
 
