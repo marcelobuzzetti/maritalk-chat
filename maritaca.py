@@ -2,6 +2,9 @@ import chainlit as cl
 import maritalk
 from dotenv import load_dotenv
 import os
+# from openai import AsyncOpenAI
+
+# client = AsyncOpenAI()
 
 # Load environment variables from .env file
 load_dotenv()
@@ -16,8 +19,6 @@ model = maritalk.MariTalk(
     key=api_key,
     model=model
 )
-
-textos = []
 
 @cl.on_message
 async def main(message: cl.Message):
