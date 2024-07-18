@@ -20,6 +20,12 @@ model = maritalk.MariTalk(
     model=model
 )
 
+@cl.on_chat_start
+async def start():
+    await cl.Message(
+        content="Olá, eu sou a Maritaca, sua assistente virtual. Como posso te ajudar?",
+    ).send()
+
 @cl.on_message
 async def main(message: cl.Message):
     textos.append({"role": "user", "content": message.content})
