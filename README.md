@@ -1,6 +1,6 @@
 # Uso do Maritaca AI com Chainlit e Literal AI
 
-Este repositório ajudará a criar um chatbot com o uso de Chainlit, Literal AI e Maritaca usando Python.
+Este repositório ajudará a criar um chatbot com o uso de Chainlit, Literal AI e Maritaca AI em Python.
 
 ## Sobre as Ferramentas
 
@@ -19,7 +19,7 @@ Este repositório ajudará a criar um chatbot com o uso de Chainlit, Literal AI 
 ```
 3. Certifique-se de ter o Python instalado em sua máquina. Você pode verificar a versão do Python digitando o seguinte comando no terminal:
 
-    ```
+    ```bash
     python --version
     ```
 
@@ -27,7 +27,7 @@ Este repositório ajudará a criar um chatbot com o uso de Chainlit, Literal AI 
 
 4. Crie um ambiente virtual (venv) para isolar as dependências do projeto. No terminal, execute o seguinte comando:
 
-    ```
+    ```bash
     python -m venv myenv
     ```
 
@@ -37,19 +37,19 @@ Este repositório ajudará a criar um chatbot com o uso de Chainlit, Literal AI 
 
     - No Windows:
 
-    ```
+    ```bash
     myenv\Scripts\activate
     ```
 
     - No macOS/Linux:
 
-    ```
+    ```bash
     source myenv/bin/activate
     ```
 
 6. Instale as dependências do projeto a partir do arquivo `requirements.txt`. No terminal, execute o seguinte comando:
 
-    ```
+    ```bash
     pip install -r requirements.txt
     ```
 
@@ -67,7 +67,7 @@ Cadastra-se no site [https://chat.maritaca.ai/](https://chat.maritaca.ai/) e ger
 
 Cadastra-se no site [https://cloud.getliteral.ai/auth/signin](https://cloud.getliteral.ai/auth/signin) e gere uma chave da API. 
 
-**LITERAL_API_KEY**="chave de acesso a API do LITERAL AI"
+**LITERAL_API_KEY**=coloque a chave de acesso a API do LITERAL AI entre aspas.
 
 ## Uso
 
@@ -88,8 +88,4 @@ Estamos abertos a contribuições! Se você tem melhorias ou correções, por fa
 
 ## Licença
 
-Este projeto é distribuído sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## Contato
-
-Para mais informações, entre em contato com o mantenedor do projeto através de [inserir meio de contato].
+Este projeto é distribuído sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
