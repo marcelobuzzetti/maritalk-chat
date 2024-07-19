@@ -4,10 +4,10 @@ Este repositório ajudará a criar um chatbot com o uso de Chainlit, Literal AI 
 
 ## Sobre as Ferramentas
 
-- **Literal AI**: [Literal AI](https://literalai.com/) é a plataforma de avaliação e observabilidade LLM preferida para desenvolvedores e proprietários de produtos.
-- **Maritaca AI**: [MariTalk](https://www.maritaca.ai/) é um chatbot baseado em LLM e treinado para atender o Brasil. Maritaca AI é uma empresa brasileira que desenvolve inteligências artificiais especializadas em domínios e idiomas, garantindo que reflitam o conhecimento único de diversas regiões do planeta e segmentos de mercado. 
+- [Literal AI](https://literalai.com/) é a plataforma de avaliação e observabilidade LLM preferida para desenvolvedores e proprietários de produtos.
+- [MariTalk](https://www.maritaca.ai/) é um chatbot baseado em LLM e treinado para atender o Brasil. Maritaca AI é uma empresa brasileira que desenvolve inteligências artificiais especializadas em domínios e idiomas, garantindo que reflitam o conhecimento único de diversas regiões do planeta e segmentos de mercado. 
 
-- **Chainlit**: [Chainlit](https://chainlit.io/) é um framework Python assíncrono de código aberto que permite aos desenvolvedores criar aplicativos de IA conversacional ou de agente escaláveis.
+- [Chainlit](https://chainlit.io/) é um framework Python assíncrono de código aberto que permite aos desenvolvedores criar aplicativos de IA conversacional ou de agente escaláveis.
 
 ## Configuração do Ambiente
 
