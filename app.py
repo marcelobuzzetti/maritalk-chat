@@ -1,10 +1,7 @@
 import chainlit as cl
-import maritalk
+import openai
 from dotenv import load_dotenv
 import os
-# from openai import AsyncOpenAI
-
-# client = AsyncOpenAI()
 
 # Load environment variables from .env file
 load_dotenv()
@@ -15,9 +12,9 @@ model = os.getenv("MODEL_MARITACA")
 
 textos = []
 
-model = maritalk.MariTalk(
-    key=api_key,
-    model=model
+client = openai.OpenAI(
+  api_key=api_key,
+  base_url="https://chat.maritaca.ai/api",
 )
 
 @cl.on_chat_start
@@ -29,7 +26,10 @@ async def start():
 @cl.on_message
 async def main(message: cl.Message):
     textos.append({"role": "user", "content": message.content})
-    answer = model.generate(textos)['answer']
+    answer = client.chat.completions.create(
+                model="sabia-3",
+                messages=textos
+            ).choices[0].message.content
     textos.append({"role": "assistant", "content": answer})
     await cl.Message(
         content=f"{answer}",
